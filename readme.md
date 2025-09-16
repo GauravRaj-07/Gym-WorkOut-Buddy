@@ -11,6 +11,7 @@ N: NodeJS (Backend)
  # npm install express
  # npm install nodemon
  # npm install dotenv
+ # npm install mongoose
 
  ## npm run dev
 
