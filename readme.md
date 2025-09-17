@@ -7,11 +7,11 @@
  React App                  ExpressJS+NodeJS    MongoDb
 
 # Backend:
- # npm init -y
- # npm install express
- # npm install nodemon
- # npm install dotenv
- # npm install mongoose
+ ## npm init -y
+ ## npm install express
+ ## npm install nodemon
+ ## npm install dotenv
+ ## npm install mongoose
 
  ## npm run dev
 
@@ -21,3 +21,7 @@
 ## GET     /workouts/:id   --> Get a single workout doc
 ## DELETE  /workouts/:id   --> Deletes a single workout doc
 ## PATCH   /workouts/:id   --> Updates a single workout
+
+# FrontEnd:
+ ## npx create-react-app frontend
+ ##  npm install react-router-dom
