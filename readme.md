@@ -12,6 +12,9 @@
  ## npm install nodemon
  ## npm install dotenv
  ## npm install mongoose
+ ## npm i bcrypt
+ ## npm i validator
+ ## npm i jsonwebtoken
 
  ## npm run dev
 

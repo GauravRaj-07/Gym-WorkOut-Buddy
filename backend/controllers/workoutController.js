@@ -3,7 +3,8 @@ const mongoose=require('mongoose')
 
 // GET all worlkouts
 exports.getWorkouts=async(req,res)=>{
-    const workouts=await workoutModel.find().sort({createdAt: -1})
+    const user_id=req.user._id
+    const workouts=await workoutModel.find({user_id}).sort({createdAt: -1})
 
     if(!workouts)
         return res.status(400).json({error:"No Entries Found"})
@@ -29,9 +30,11 @@ exports.getWorkout=async(req,res)=>{
 
 // Create a new workout
 exports.createWorkout=async(req,res)=>{
+
     const {title,load,reps}=req.body;
     try{
-        const workout=await workoutModel.create({title,load,reps})
+        const user_id=req.user._id
+        const workout=await workoutModel.create({title,load,reps,user_id})
         res.status(200).json(workout)
     }catch(error){
         res.status(400).json({error:error.message})
