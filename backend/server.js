@@ -5,7 +5,9 @@ const dotenv=require('dotenv')
 
 const mongoose=require('mongoose')
 
+// routes
 const workoutRoutes=require('./routes/workout')
+const userRoutes=require('./routes/user')
 
 dotenv.config()
 
@@ -24,6 +26,8 @@ app.get('/',(req,res)=>{
     res.json({msg:"Welcome to our application"})
 })
 app.use('/api/workouts/',workoutRoutes)
+app.use('/api/user/',userRoutes)
+
 
 // connect to database
 mongoose.connect(process.env.MONGO_URL)
