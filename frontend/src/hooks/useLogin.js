@@ -12,6 +12,7 @@ export const useLogin=()=>{
         setError(null)
 
         const response=await fetch('/api/user/login',{
+        // const response=await fetch('https://gym-workout-buddy-backend.onrender.com/api/user/login',{
             method:'POST',
             headers:{'Content-Type':'application/json'},
             body:JSON.stringify({email,password})
