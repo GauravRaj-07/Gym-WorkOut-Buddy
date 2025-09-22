@@ -16,7 +16,7 @@ const app = express();
 // ✅ CORS setup
 const allowedOrigins = [
   'http://localhost:3000', // local dev
-  'https://frontend-heic.onrender.com' // your deployed frontend
+  'https://gym-workout-buddy-frontend-nb1m.onrender.com' // your deployed frontend
 ];
 
 app.use(
