@@ -17,7 +17,8 @@ const Home = () => {
 
   useEffect(()=>{
     const fetchWorkouts=async ()=>{
-      const response=await fetch('/api/workouts/',{
+      // const response=await fetch('/api/workouts/',{
+      const response=await fetch('https://gym-workout-buddy-backend.onrender.com/api/workouts',{
         headers:{
           'Authorization':`Bearer ${user.token}`
         }
